@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--CRUD app-->
+    <!-- thêm font chữ-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To Do app</title>
+</head>
+
+
+<body>
+    
+    <header>A TO DO Website helps organizing your daily tasks</header>
+    
+    <!--app wrapper-->
+    <main class = "App">
+
+    <section class="greeting">
+      <h2 class = "name">
+        Hello, <input type = "text" id = "username"
+        placeholder ="Enter your name here">
+      </h2>
+    </section>
+
+    <!--New to do-->
+
+    <section class="create-todo"> 
+      <h2>CREATE A TODO</h2>
+      <form id="new-todo-form">
+        <h3>What do you want to do ?</h3> <br> 
+          <input 
+          type="text" 
+          id="taskname" 
+          placeholder = "e.g. Buy groceries" 
+          name="content">
+        <h3> Pick a category</h3> <br>
+
+        <div class= "option">
+          <label>
+            <div> 
+              <input type ="radio">Personal
+            </div>
+            <span class = "bubble personal"></span>
+          </label>
+
+          <label>
+            <div> <input type ="radio">Business</div>
+            <span class = "bubble business"></span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--add">
+          <img src="https://www.svgrepo.com/show/170952/add-button.svg" class ="add--img">
+        </button>
+
+      </form>
+    </section>
+      
+    <!--Already added to do-->
+
+    <section class="todo-list">
+
+      <h2> TODO LIST </h2>
+      <input type="checkbox"><br>
+
+        <div class="list" id="todo-list">
+        <input type="text" placeholder=""><br>
+        <button type="submit">Edit</button>
+        <button type="submit">Delete</button>
+
+        </div>
+    </section>
+
+  </main>
+  
+    <script src ="script.js"></script>
+    
+  
+</body>
+</html>
