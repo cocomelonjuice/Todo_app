@@ -1,46 +1,45 @@
 
 window.addEventListener ("load",function (){
 
-todos = JSON.parse (localStorage.getItem ('todo'))|| [];/*lưu biến global "todos" vào local storeage 
-ở dạng Object bằng cách dùng JSON.parse để chuyển giá trị todo ở dạng string JSON nhận được từ web server chuyển 
-thành Object, trong trường hợp không có giá trị todo thì gán "todos" bằng array rỗng [] */
+    todos = JSON.parse (localStorage.getItem ('todo'))|| [];/*lưu biến global "todos" vào local storeage 
+    ở dạng Object bằng cách dùng JSON.parse để chuyển giá trị todo ở dạng string JSON nhận được từ web server chuyển 
+    thành Object, trong trường hợp không có giá trị todo thì gán "todos" bằng array rỗng [] */
 
-const nameInput = document.getElementById('name');
+    const nameInput = document.getElementById('name');
 
-const username = localStorage.getItem('username')||''; // '' là emmpty string
+    const username = localStorage.getItem('username')||''; // '' là emmpty string
 
-nameInput.value = username;
+    nameInput.value = username;
 
-nameInput.addEventListener ('change',function(e) {
-    localStorage.setItem ('username',e.target.value);
-}); // dùng để get và setitem cho username, nếu username đã có thì có thể update giá trị mới
+    nameInput.addEventListener ('change',function(e) {
+        localStorage.setItem ('username',e.target.value);
+    }); // dùng để get và setitem cho username, nếu username đã có thì có thể update giá trị mới
 
 
-// dùng để get json string
-newTodoForm.addEventListener ('submit',function(e){
-e.preventDefault();
+    // dùng để get json string
+    newTodoForm.addEventListener ('submit',function(e){
+    e.preventDefault();
 
-const todo = {
-    content: e.target.elements.content.value,
-    category: e.target.elements.category.value,
-    done:false,
-    createAt: new Date().getTime()
-};
+    const todo = {
+        content: e.target.elements.content.value,
+        category: e.target.elements.category.value,
+        done:false,
+        createAt: new Date().getTime()
+    };
 
-todos.push (todo);// thêm todo mới vào array todos
+    todos.push (todo);// thêm todo mới vào array todos
 
-localStorage.setItem ('todo',JSON.stringify(todos));/*chuyển giá trị todos
-từ dạng mảng array sang string (nhờ stringify )vì web server không lưu được kiểu
-array, sau đó gán giá trị đó cho todo nhờ method setItem*/
+    localStorage.setItem ('todo',JSON.stringify(todos));/*chuyển giá trị todos
+    từ dạng mảng array sang string (nhờ stringify )vì web server không lưu được kiểu
+    array, sau đó gán giá trị đó cho todo nhờ method setItem*/
 
-//reset form
-e.target.reset ();
+    //reset form
+    e.target.reset ();
 
-DisplayTodos ();
+    DisplayTodos ();
 
-});
-DisplayTodos ();
-
+    });
+    DisplayTodos ();
 });
 
 
