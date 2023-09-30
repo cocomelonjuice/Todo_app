@@ -1,0 +1,102 @@
+/*:root{
+
+}*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: teal;
+}
+
+
+.AppWrapper{
+    display: grid;
+    justify-content: center;
+    min-height: 50px;
+
+}
+
+h2 {
+    padding: 30px 0 20px 17px;
+    width: 280px;
+}
+
+
+.new-todo-form{
+    display: grid;
+    grid-template-columns: 250px 50px;
+    max-height: 30px;
+    max-width: 300px;
+    column-gap: 5px;
+}
+
+.taskname{
+    height: 25px;
+    border-radius: 5px;
+    font-size: 12px;
+    
+}
+
+.add-button{
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.add-button:hover{
+    border-radius: 5px;
+    cursor:pointer;
+    background-color: lightgreen;
+    
+    
+}
+
+.todo-items {
+    min-width: 350px;
+  }
+  
+  /* each li with class="item" */
+  .item {
+    background-color: #fff;
+    padding: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .item:first-child {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+  
+  .item:last-child {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  
+  /* item style end */
+  
+  .checkbox {
+    margin-right: 10px;
+  }
+  
+  .delete-button {
+    float: right;
+    background-color: #dc143c;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    padding: 2px 5px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: 550;
+  }
+  
+  /* applied when the todo item is checked */
+  .checked { 
+    text-decoration: line-through;
+  }
+
+
+
+
